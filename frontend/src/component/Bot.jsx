@@ -35,23 +35,24 @@ function Bot() {
         if (e.key === 'Enter') handleSendMessage()}
             
   return (
-    <div className='flex flex-col min-h-screen bg-[#0d0d0d] text-white'>
+    <div className='flex flex-col min-h-screen bg-[#0d0d0d] text-white bg-[#212121]'>
          {/* Navbar & Header */}
       <header className="fixed top-0 left-0 w-full border-b border-gray-800 bg-[#0d0d0d] z-10">
         <div className=" container mx-auto flex justify-between items-center px-6 py-4">
-          <h1 className="text-lg font-bold">ChatBot</h1>
+         <h1 className="text-lg font-bold text-blue-500">AI-ChatBot</h1>
           <FaUserCircle size={30} className="cursor-pointer" />
         </div>
       </header>
 
       {/* Chat area */}
+
       <main className="flex-1 overflow-y-auto pt-20 pb-24 flex items-center justify-center">
         <div className="w-full max-w-4xl mx-auto px-4 flex flex-col space-y-3">
           {messages.length === 0 ? (
             // Centered welcome message
             <div className="text-center text-gray-400 text-lg">
-              👋 Hi, I'm{" "}
-              <span className="text-green-500 font-semibold">ChatBot</span>.
+              👋 Hi,
+              <span className="text-green-500 font-semibold">Lakshya</span>.
             </div>
           ) : (
             <>
@@ -86,7 +87,7 @@ function Bot() {
             <input
               type="text"
               className="flex-1 bg-transparent outline-none text-white placeholder-gray-400 px-2"
-              placeholder="Ask BotSpoof..."
+              placeholder="Ask ...."
              value={input}
              onChange={(e) => setInput(e.target.value)}
              onKeyDown={handleKeyPress}
